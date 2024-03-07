@@ -9,7 +9,7 @@ public class ExpensesCategory {
         this.categoryName = categoryName;
     }
 
-    public ExpensesCategory createCategory(String id, String categoryName) {
+    public ExpensesCategory createCategory(String id, String categoryName) { 
         return new ExpensesCategory(id, categoryName);
     }
     
