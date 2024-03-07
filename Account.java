@@ -25,7 +25,16 @@ public class Account {
         this.age = age;
     }
 
-    public Account signUp(String id, String password, String email, String name, String lastname, int age) {
+    public static Account signUp(String id, String password, String repeatPassword, String email, String name, String lastname, int age) {
+        if (password == null || password.length() <= 6) {
+            throw new IllegalArgumentException("Le mot de passe doit contenir plus de 6 caractères.");
+        }
+        if (!password.equals(repeatPassword)) {
+            throw new IllegalArgumentException("Les mots de passe ne correspondent pas.");
+        }
+        if (!password.contains("@")) {
+            throw new IllegalArgumentException("Le mot de passe doit contenir le caractère '@'.");
+        }
         return new Account(id, password, email, name, lastname, age);
     }
 
