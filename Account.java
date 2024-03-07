@@ -5,7 +5,7 @@ public class Account {
     private String email;
     private String name;
     private String lastname;
-    private String age;
+    private int age;
 
 
     
